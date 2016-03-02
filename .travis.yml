@@ -14,6 +14,7 @@ before_script:
   - grunt
   - ls
   - cd dist
+  - cd public
   - ls
 script:
   - karma start config/karma.config.js --single-run --browsers PhantomJS
