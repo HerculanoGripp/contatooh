@@ -3,7 +3,6 @@ node_js:
   - 0.10
 notifications:
   - herculano.work@gmail.com
-
 before_install:
   - npm install -g bower@1.3
   - npm install -g grunt-cli@0.1
@@ -11,6 +10,8 @@ before_install:
   - npm install -g protractor@1.5
   - webdriver-manager update
   - bower install
-
+before_script:
+  - grunt
+  - cd dist
 script:
   - karma start config/karma.config.js --single-run --browsers PhantomJS
