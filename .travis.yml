@@ -8,7 +8,7 @@ services:
 env:
   global:
     - NODE_ENV: test
-addon:
+addons:
   sauce_connect: true
 before_install:
   - npm install -g bower@1.3
