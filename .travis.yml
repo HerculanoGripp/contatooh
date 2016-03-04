@@ -3,6 +3,13 @@ node_js:
   - 4.2.2
 notifications:
   - herculano.work@gmail.com
+services:
+  - mongodb
+env:
+  global:
+    - NODE_ENV: test
+addon:
+  sauce_connect: true
 before_install:
   - npm install -g bower@1.3
   - npm install -g grunt-cli@0.1
@@ -15,3 +22,5 @@ before_script:
   - cd dist
 script:
   - karma start config/karma.config.js --single-run --browsers PhantomJS
+  - node server &
+  - protractor config/protractor.js
