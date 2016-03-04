@@ -18,7 +18,7 @@ MongoClient.connect('mongodb://127.0.0.1:27017/contaooh_test',
 			console.log('Banco apagado com sucesso');
 
 			db.collection('contatos').insert(contatos,
-				functin(err, inserted){
+				function(err, inserted){
 					if(err) return console.log(err);
 
 					console.log('Banco de dados populado com sucesso');
