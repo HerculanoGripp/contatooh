@@ -8,7 +8,7 @@ exports.config = {
 	capabilities: {
 		'name': 				config.sauceTestName,
 		'browserName': 			'chrome',
-		'tunnel_identifier': 	config.travisJobName,
+		'tunnel-identifier': 	config.travisJobName,
 		'build': 				config.travisBuild
 	},
 	specs: ['../test/e2e/**/*.js'],
